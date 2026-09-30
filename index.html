@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ZAAP Dashboard V20 Weekly Forecast Dates</title>
+<title>ZAAP Dashboard V19 Weekly Forecast</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -216,13 +216,14 @@ td:not(:first-child):hover{
 .pi-total .note{font-size:7px;color:#9aa2ab;margin-top:1px}
 @media(max-width:720px){.flow-summary{grid-template-columns:1fr 1fr}}
 
+
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="hero">
     <div class="hero-top">
-      <div><div class="eyebrow">THAI FOODIE FRIEND · FAST ORDER INTELLIGENCE</div><h1>ORDER COMMAND CENTER · V19 WEEKLY FORECAST</h1><div style="font-size:7px;color:#7e8994;margin-top:3px">DEPLOYMENT: …GMHq6n4se94zTNOSp-0H9t · V19 WEEKLY FORECAST</div></div>
+      <div><div class="eyebrow">THAI FOODIE FRIEND · FAST ORDER INTELLIGENCE</div><h1>ORDER COMMAND CENTER · V19 WEEKLY FORECAST</h1><div style="font-size:11px;opacity:.65;margin-top:4px">BUILD: V19 CORE READY · 14/09/2026 15:49</div><div style="font-size:7px;color:#7e8994;margin-top:3px">DEPLOYMENT: …I24n47bvKDeuzfUm8x4qE7bj · V19 WEEKLY FORECAST</div></div>
       <div class="live"><b>● LIVE API</b><br><span id="updated">กำลังเชื่อมต่อ…</span></div>
     </div>
     <div class="actions"><button class="btn sync" id="sync">↻ Sync Data</button><button class="btn api" id="api">API Core Check</button></div>
@@ -235,9 +236,13 @@ td:not(:first-child):hover{
     <div class="field"><label>ช่องทาง</label><select id="platform"><option value="all">ทุกแพลตฟอร์ม</option><option>TikTok แซ่บปะล้ำปะเหลือ</option><option>TikTok แก๊งค์น้องแซ่บ</option><option>Shopee</option><option>Lazada</option></select></div>
   </div>
 
+
+  
+
+
   <div id="loading" class="loading">กำลังโหลด Core Data จาก Google Sheets…</div>
     <div class="progress-row" id="progress">
-      <div class="progress-card wait" id="pCore">Core · <b>รอโหลด</b></div>
+      <div class="progress-card ok" id="pCore">Core · <b>พร้อมทันที ✅</b></div>
       <div class="progress-card wait" id="pProduct">Product · <b>รอโหลด</b></div>
       <div class="progress-card wait" id="pForecast">Forecast · <b>รอโหลด</b></div>
     </div>
@@ -245,7 +250,9 @@ td:not(:first-child):hover{
 </div>
 
 <script>
-const API="https://script.google.com/macros/s/AKfycbxWJRujcX5ZkrA7e4Hhohc6UpYQiVSHK1ygv84d2ZYbd-GMHq6n4se94zTNOSp-0H9t/exec";
+const API='https://script.google.com/macros/s/AKfycbybyIwJi9bse8-BBTYmqnm3E0fxAGGClazJpiRH67rDI24n47bvKDeuzfUm8x4qE7bj/exec';
+
+const ZAAP_EMBEDDED_CORE={"success":true,"endpoint":"coreboot","meta":{"from":"2026-07-01","to":"2026-08-31","databaseFrom":"2026-07-01","databaseTo":"2026-08-31","previousFrom":"2026-04-30","previousTo":"2026-06-30","updatedAt":"14/09/2026 10:38:17","orderRows":51347,"stockRows":99076,"status":"all","platform":"all","cache":"MISS","snapshot":true},"kpi":{"orders":33925,"quantity":52979,"mainUnits":74340,"giftUnits":44206,"revenue":8563718.97999957,"products":158},"comparison":{"current":{"orders":33925,"quantity":52979,"mainUnits":74340,"giftUnits":44206,"revenue":8563718.97999957,"products":158},"previous":{"orders":0,"quantity":0,"mainUnits":0,"giftUnits":0,"revenue":0,"products":0}},"channels":[{"platform":"TikTok แซ่บปะล้ำปะเหลือ","orders":27262,"quantity":44320,"mainUnits":58923,"giftUnits":41080,"revenue":6481963.249999578,"products":70},{"platform":"TikTok แก๊งค์น้องแซ่บ","orders":1620,"quantity":2347,"mainUnits":3478,"giftUnits":2537,"revenue":463637.8900000002,"products":50},{"platform":"Shopee","orders":5015,"quantity":6248,"mainUnits":11839,"giftUnits":576,"revenue":1603967,"products":73},{"platform":"Lazada","orders":28,"quantity":64,"mainUnits":100,"giftUnits":13,"revenue":14150.840000000004,"products":20}],"daily":[{"date":"2026-07-01","orders":544,"shipped":0,"success":494,"cancelled":49,"units":1152,"revenue":139433.2299999998},{"date":"2026-07-02","orders":565,"shipped":0,"success":517,"cancelled":48,"units":1242,"revenue":142894.67999999993},{"date":"2026-07-03","orders":639,"shipped":0,"success":573,"cancelled":66,"units":1325,"revenue":154684.70999999993},{"date":"2026-07-04","orders":643,"shipped":0,"success":544,"cancelled":98,"units":1604,"revenue":167166.93999999986},{"date":"2026-07-05","orders":597,"shipped":0,"success":503,"cancelled":94,"units":1331,"revenue":141797.70999999993},{"date":"2026-07-06","orders":635,"shipped":0,"success":573,"cancelled":61,"units":1522,"revenue":157420.7899999999},{"date":"2026-07-07","orders":836,"shipped":0,"success":751,"cancelled":82,"units":2037,"revenue":219462.80999999944},{"date":"2026-07-08","orders":499,"shipped":0,"success":438,"cancelled":61,"units":1190,"revenue":136112.21999999974},{"date":"2026-07-09","orders":514,"shipped":0,"success":464,"cancelled":50,"units":1110,"revenue":124165.78999999985},{"date":"2026-07-10","orders":425,"shipped":0,"success":382,"cancelled":43,"units":937,"revenue":110647.61999999994},{"date":"2026-07-11","orders":495,"shipped":0,"success":437,"cancelled":58,"units":1118,"revenue":141413.08000000005},{"date":"2026-07-12","orders":456,"shipped":0,"success":410,"cancelled":46,"units":1022,"revenue":124340.83},{"date":"2026-07-13","orders":446,"shipped":0,"success":405,"cancelled":41,"units":885,"revenue":113490.83999999998},{"date":"2026-07-14","orders":539,"shipped":0,"success":490,"cancelled":48,"units":1104,"revenue":128087.15},{"date":"2026-07-15","orders":597,"shipped":0,"success":546,"cancelled":51,"units":1255,"revenue":156086.97999999992},{"date":"2026-07-16","orders":568,"shipped":0,"success":497,"cancelled":71,"units":1150,"revenue":135779.97999999975},{"date":"2026-07-17","orders":491,"shipped":0,"success":458,"cancelled":33,"units":1011,"revenue":120293.74999999994},{"date":"2026-07-18","orders":473,"shipped":0,"success":426,"cancelled":47,"units":911,"revenue":112891.08999999995},{"date":"2026-07-19","orders":477,"shipped":0,"success":414,"cancelled":63,"units":957,"revenue":113620.39999999997},{"date":"2026-07-20","orders":480,"shipped":0,"success":435,"cancelled":44,"units":997,"revenue":131093.87000000002},{"date":"2026-07-21","orders":468,"shipped":0,"success":412,"cancelled":56,"units":941,"revenue":121082.50999999994},{"date":"2026-07-22","orders":531,"shipped":0,"success":478,"cancelled":51,"units":1144,"revenue":140740.02000000005},{"date":"2026-07-23","orders":453,"shipped":0,"success":406,"cancelled":46,"units":964,"revenue":121533.22999999992},{"date":"2026-07-24","orders":765,"shipped":0,"success":692,"cancelled":73,"units":1472,"revenue":164618.68000000005},{"date":"2026-07-25","orders":908,"shipped":0,"success":802,"cancelled":106,"units":2030,"revenue":219458.6099999997},{"date":"2026-07-26","orders":881,"shipped":0,"success":748,"cancelled":133,"units":2082,"revenue":234566.98999999903},{"date":"2026-07-27","orders":941,"shipped":0,"success":777,"cancelled":164,"units":2053,"revenue":228124.90999999942},{"date":"2026-07-28","orders":910,"shipped":0,"success":757,"cancelled":153,"units":2047,"revenue":224148.38999999966},{"date":"2026-07-29","orders":908,"shipped":0,"success":783,"cancelled":125,"units":1951,"revenue":205302.22999999978},{"date":"2026-07-30","orders":942,"shipped":0,"success":826,"cancelled":115,"units":2072,"revenue":221971.49000000008},{"date":"2026-07-31","orders":655,"shipped":0,"success":560,"cancelled":95,"units":1410,"revenue":153871.16999999995},{"date":"2026-08-01","orders":211,"shipped":0,"success":189,"cancelled":22,"units":450,"revenue":51783.31000000004},{"date":"2026-08-02","orders":2,"shipped":0,"success":0,"cancelled":0,"units":8,"revenue":1303.58},{"date":"2026-08-03","orders":38,"shipped":0,"success":35,"cancelled":3,"units":86,"revenue":10689.629999999997},{"date":"2026-08-04","orders":156,"shipped":0,"success":146,"cancelled":9,"units":327,"revenue":45534.62},{"date":"2026-08-05","orders":522,"shipped":0,"success":467,"cancelled":54,"units":1250,"revenue":137758.9100000002},{"date":"2026-08-06","orders":396,"shipped":0,"success":350,"cancelled":46,"units":891,"revenue":99310.76000000017},{"date":"2026-08-07","orders":330,"shipped":0,"success":300,"cancelled":28,"units":729,"revenue":82107.7200000001},{"date":"2026-08-08","orders":460,"shipped":0,"success":410,"cancelled":50,"units":1107,"revenue":122006.65000000008},{"date":"2026-08-09","orders":502,"shipped":0,"success":426,"cancelled":75,"units":1201,"revenue":134503.28000000003},{"date":"2026-08-10","orders":341,"shipped":0,"success":304,"cancelled":37,"units":772,"revenue":93088.73000000001},{"date":"2026-08-11","orders":318,"shipped":0,"success":275,"cancelled":43,"units":723,"revenue":86181.25999999994},{"date":"2026-08-12","orders":290,"shipped":0,"success":253,"cancelled":37,"units":633,"revenue":77221.29999999996},{"date":"2026-08-13","orders":305,"shipped":0,"success":274,"cancelled":30,"units":707,"revenue":84063.23999999992},{"date":"2026-08-14","orders":421,"shipped":0,"success":379,"cancelled":41,"units":961,"revenue":116739.4299999999},{"date":"2026-08-15","orders":483,"shipped":0,"success":421,"cancelled":62,"units":1054,"revenue":128787.76999999984},{"date":"2026-08-16","orders":432,"shipped":0,"success":379,"cancelled":53,"units":1010,"revenue":126750.8499999998},{"date":"2026-08-17","orders":503,"shipped":0,"success":460,"cancelled":43,"units":1072,"revenue":130270.1499999999},{"date":"2026-08-18","orders":381,"shipped":0,"success":343,"cancelled":37,"units":769,"revenue":94533.23999999998},{"date":"2026-08-19","orders":494,"shipped":0,"success":453,"cancelled":41,"units":1077,"revenue":126403.57999999994},{"date":"2026-08-20","orders":398,"shipped":0,"success":350,"cancelled":46,"units":832,"revenue":107052.22000000002},{"date":"2026-08-21","orders":383,"shipped":0,"success":341,"cancelled":41,"units":829,"revenue":111235.64999999992},{"date":"2026-08-22","orders":406,"shipped":0,"success":358,"cancelled":48,"units":882,"revenue":96553.86999999994},{"date":"2026-08-23","orders":413,"shipped":0,"success":357,"cancelled":56,"units":799,"revenue":98888.12999999993},{"date":"2026-08-24","orders":454,"shipped":0,"success":408,"cancelled":45,"units":906,"revenue":113873.31999999999},{"date":"2026-08-25","orders":780,"shipped":1,"success":719,"cancelled":60,"units":1754,"revenue":194694.09000000026},{"date":"2026-08-26","orders":1066,"shipped":0,"success":971,"cancelled":95,"units":2214,"revenue":250104.2900000007},{"date":"2026-08-27","orders":808,"shipped":0,"success":730,"cancelled":78,"units":1750,"revenue":229765.86000000025},{"date":"2026-08-28","orders":744,"shipped":1,"success":680,"cancelled":62,"units":1586,"revenue":182394.99999999988},{"date":"2026-08-29","orders":781,"shipped":7,"success":680,"cancelled":94,"units":1835,"revenue":190186.3000000003},{"date":"2026-08-30","orders":910,"shipped":14,"success":798,"cancelled":96,"units":2110,"revenue":222185.52000000078},{"date":"2026-08-31","orders":916,"shipped":26,"success":792,"cancelled":106,"units":1990,"revenue":211444.01999999993}],"funnel":{"all":33925,"shipped":49,"success":30046,"cancelled":3809},"snapshot":{"builtAt":"14/09/2026 10:38:17","mode":"default-all"}};
 let CORE=null, PRODUCT=null, FORECAST=null, DATA=null, selectedProduct='';
 
 const $=id=>document.getElementById(id);
@@ -255,33 +262,70 @@ const dmy=iso=>{if(!iso)return '—';let m=String(iso).match(/^(\d{4})-(\d{2})-(
 const icon=p=>p.startsWith('TikTok')?'🎵':p==='Shopee'?'🛍️':p==='Lazada'?'🧡':'📦';
 const short=p=>p==='TikTok แซ่บปะล้ำปะเหลือ'?'TikTok แซ่บ':p==='TikTok แก๊งค์น้องแซ่บ'?'TikTok แก๊งค์':p;
 
-async function fetchPart(type, params){
-  const qs=new URLSearchParams({type});
-  Object.entries(params||{}).forEach(([k,v])=>{if(v!==''&&v!=null)qs.set(k,v)});
-  const r=await fetch(`${API}?${qs.toString()}`,{method:'GET',redirect:'follow'});
-  if(!r.ok)throw new Error(`HTTP ${r.status}`);
-  const j=await r.json();
-  if(!j.success)throw new Error(j.error||`${type} API Error`);
-  return j;
+
+
+const ZAAP_CORE_LOCAL_KEY='ZAAP_V19_CORE_LAST';
+const ZAAP_CORE_LOCAL_MAX_AGE=24*60*60*1000;
+
+function saveCoreLocal_(data){
+  try{
+    localStorage.setItem(ZAAP_CORE_LOCAL_KEY,JSON.stringify({
+      savedAt:Date.now(),
+      data:data
+    }));
+  }catch(e){}
 }
 
-function setProgress(id,state,text){
-  const el=$(id);
-  if(!el)return;
-  el.className=`progress-card ${state}`;
-  el.innerHTML=`${id==='pCore'?'Core':id==='pProduct'?'Product':'Forecast'} · <b>${text}</b>`;
+function getCoreLocal_(){
+  try{
+    const raw=localStorage.getItem(ZAAP_CORE_LOCAL_KEY);
+    if(!raw)return null;
+    const x=JSON.parse(raw);
+    if(!x||!x.data)return null;
+    return x;
+  }catch(e){return null}
+}
+
+
+function zaapForceFreshCore_(){
+  try{localStorage.removeItem(ZAAP_CORE_LOCAL_KEY)}catch(e){}
+}
+
+async function fetchPart(type,params){
+  const qs=new URLSearchParams({type,...(params||{})}).toString();
+  const res=await fetch(`${API}?${qs}`);
+  if(!res.ok){
+    throw new Error(type+' HTTP '+res.status);
+  }
+  const data=await res.json();
+  if(!data||data.success===false){
+    throw new Error(type+': '+(data&&data.error?data.error:'unknown response'));
+  }
+  return data;
+}
+
+async function fetchPartFast_(type,params,ms=10000){
+  return await Promise.race([
+    fetchPart(type,params),
+    new Promise((_,reject)=>
+      setTimeout(()=>reject(new Error(type+' Snapshot timeout')),ms)
+    )
+  ]);
+}
+
+function isDefaultRange_(params){
+  const base=ZAAP_EMBEDDED_CORE.meta||{};
+  const baseFrom=base.databaseFrom||base.from||'';
+  const baseTo=base.databaseTo||base.to||'';
+  return (
+    (params.from||'')===baseFrom &&
+    (params.to||'')===baseTo &&
+    (params.status||'all')==='all' &&
+    (params.platform||'all')==='all'
+  );
 }
 
 async function load(resetDates=false){
-
-  $('loading').className='loading';
-  $('loading').textContent='กำลังโหลด Core Data จาก Google Sheets…';
-  $('loading').style.display='block';
-
-  setProgress('pCore','wait','กำลังโหลด');
-  setProgress('pProduct','wait','รอ Core');
-  setProgress('pForecast','wait','รอ Core');
-
   const params={
     status:$('status').value,
     platform:$('platform').value
@@ -290,63 +334,123 @@ async function load(resetDates=false){
   if($('from').value)params.from=$('from').value;
   if($('to').value)params.to=$('to').value;
 
-  try{
+  // เปิดหน้าแบบทันทีจาก Snapshot ที่ฝังมากับ HTML ก่อนเสมอ กัน UI ค้าง
+  CORE=JSON.parse(JSON.stringify(ZAAP_EMBEDDED_CORE));
 
-    CORE=await fetchPart('core',params);
-    setProgress('pCore','ok','สำเร็จ');
+  if(resetDates||!$('from').value){
+    $('from').value=CORE.meta.databaseFrom||CORE.meta.from||'';
+  }
+  if(resetDates||!$('to').value){
+    $('to').value=CORE.meta.databaseTo||CORE.meta.to||'';
+  }
 
-    if(resetDates||!$('from').value)$('from').value=CORE.meta.databaseFrom||CORE.meta.from||'';
-    if(resetDates||!$('to').value)$('to').value=CORE.meta.databaseTo||CORE.meta.to||'';
+  params.from=$('from').value;
+  params.to=$('to').value;
 
-    // ถ้า Core กำหนดวันที่ให้ใหม่ ให้ใช้ช่วงนั้นกับ 2 endpoint ที่เหลือ
-    params.from=$('from').value;
-    params.to=$('to').value;
+  const useLive=!isDefaultRange_(params);
 
-    DATA={
-      ...CORE,
-      sizes:[],
-      mushroomFlavors:[],
-      chiliMenus:[],
-      mushroomHeatmap:{},
-      mushroomColumns:[],
-      chiliHeatmap:{},
-      chiliColumns:[],
-      products:[],
-      sets:[],
-      forecast:[]
-    };
+  DATA={
+    ...CORE,
+    sizes:PRODUCT?.sizes||[],
+    mushroomFlavors:PRODUCT?.mushroomFlavors||[],
+    chiliMenus:PRODUCT?.chiliMenus||[],
+    mushroomHeatmap:PRODUCT?.mushroomHeatmap||{},
+    mushroomColumns:PRODUCT?.mushroomColumns||[],
+    chiliHeatmap:PRODUCT?.chiliHeatmap||{},
+    chiliColumns:PRODUCT?.chiliColumns||[],
+    products:PRODUCT?.products||[],
+    sets:PRODUCT?.sets||[],
+    forecast:FORECAST?.forecast||[]
+  };
 
-    $('updated').textContent=`${fmt(CORE.kpi.orders)} ออเดอร์ · ${dmy(CORE.meta.from)}–${dmy(CORE.meta.to)} · ${CORE.meta.updatedAt}`;
+  $('updated').textContent=useLive
+    ? `${fmt(CORE.kpi.orders)} ออเดอร์ · ${dmy(CORE.meta.from)}–${dmy(CORE.meta.to)} · กำลังคำนวณช่วงที่เลือก… (อาจใช้เวลาถึง 1-2 นาที)`
+    : `${fmt(CORE.kpi.orders)} ออเดอร์ · ${dmy(CORE.meta.from)}–${dmy(CORE.meta.to)} · Snapshot ${CORE.meta.updatedAt}`;
 
-    // แสดง Core ก่อนทันที
-    render();
-    $('app').style.display='block';
-    $('loading').style.display='none';
+  render();
+  $('app').style.display='block';
+  $('loading').style.display='none';
 
+  if(!useLive){
+    // ช่วงเวลา/สถานะ/แพลตฟอร์ม = ค่าเริ่มต้นทั้งหมด -> ใช้ Snapshot เร็วตามเดิม
+    setProgress('pCore','ok','พร้อมทันที ✅');
     setProgress('pProduct','wait','กำลังโหลด');
     setProgress('pForecast','wait','กำลังโหลด');
 
-    const [productResult,forecastResult]=await Promise.allSettled([
-      fetchPart('product',params),
-      fetchPart('forecast',params)
-    ]);
+    Promise.allSettled([
+      fetchPartFast_('productboot',{},10000),
+      fetchPartFast_('forecastboot',{},10000)
+    ]).then(results=>{
+      const [productResult,forecastResult]=results;
+
+      if(productResult.status==='fulfilled'){
+        PRODUCT=productResult.value;
+        setProgress('pProduct','ok','สำเร็จ');
+      }else{
+        PRODUCT=null;
+        setProgress('pProduct','err','โหลดไม่สำเร็จ');
+      }
+
+      if(forecastResult.status==='fulfilled'){
+        FORECAST=forecastResult.value;
+        setProgress('pForecast','ok','สำเร็จ');
+      }else{
+        FORECAST=null;
+        setProgress('pForecast','err','โหลดไม่สำเร็จ');
+      }
+
+      DATA={
+        ...CORE,
+        ...(PRODUCT||{}),
+        forecast:FORECAST?.forecast||[]
+      };
+      render();
+    });
+
+    return;
+  }
+
+  // ผู้ใช้เปลี่ยนช่วงวันที่/สถานะ/แพลตฟอร์มจากค่าเริ่มต้น -> Snapshot ไม่ครอบคลุม
+  // ต้องคำนวณสดจาก ORDER_DATABASE/STOCK_MOVEMENT ตรง ๆ (ช้ากว่า Snapshot มาก)
+  setProgress('pCore','wait','กำลังคำนวณช่วงที่เลือก…');
+  setProgress('pProduct','wait','กำลังคำนวณช่วงที่เลือก…');
+  setProgress('pForecast','wait','กำลังคำนวณช่วงที่เลือก…');
+
+  const liveParams={
+    from:params.from,
+    to:params.to,
+    status:params.status,
+    platform:params.platform
+  };
+
+  Promise.allSettled([
+    fetchPartFast_('core',liveParams,120000),
+    fetchPartFast_('product',liveParams,120000),
+    fetchPartFast_('forecast',liveParams,120000)
+  ]).then(results=>{
+    const [coreResult,productResult,forecastResult]=results;
+
+    if(coreResult.status==='fulfilled'){
+      CORE=coreResult.value;
+      setProgress('pCore','ok','สำเร็จ (ช่วงที่เลือก)');
+    }else{
+      setProgress('pCore','err','คำนวณไม่สำเร็จ');
+    }
 
     if(productResult.status==='fulfilled'){
       PRODUCT=productResult.value;
-      setProgress('pProduct','ok','สำเร็จ');
+      setProgress('pProduct','ok','สำเร็จ (ช่วงที่เลือก)');
     }else{
       PRODUCT=null;
-      setProgress('pProduct','err','โหลดไม่สำเร็จ');
-      console.error('Product API:',productResult.reason);
+      setProgress('pProduct','err','คำนวณไม่สำเร็จ');
     }
 
     if(forecastResult.status==='fulfilled'){
       FORECAST=forecastResult.value;
-      setProgress('pForecast','ok','สำเร็จ');
+      setProgress('pForecast','ok','สำเร็จ (ช่วงที่เลือก)');
     }else{
       FORECAST=null;
-      setProgress('pForecast','err','โหลดไม่สำเร็จ');
-      console.error('Forecast API:',forecastResult.reason);
+      setProgress('pForecast','err','คำนวณไม่สำเร็จ');
     }
 
     DATA={
@@ -355,15 +459,27 @@ async function load(resetDates=false){
       forecast:FORECAST?.forecast||[]
     };
 
+    $('updated').textContent=
+      `${fmt(CORE.kpi.orders)} ออเดอร์ · ${dmy(CORE.meta.from)}–${dmy(CORE.meta.to)} · คำนวณสดตามช่วงที่เลือก`;
+
     render();
+  });
+}
 
-  }catch(e){
 
-    setProgress('pCore','err','โหลดไม่สำเร็จ');
-    $('loading').className='loading error';
-    $('loading').innerHTML=`โหลด Core Data ไม่สำเร็จ: ${e.message}<br><small>V19 ใช้ Deployment …GMHq6n4se94zTNOSp-0H9t · กด API Core Check เพื่อตรวจสอบ API ตัวเดียวกับ Dashboard</small>`;
-    $('app').style.display='none';
-  }
+function setProgress(id,state,text){
+  const el=document.getElementById(id);
+  if(!el)return;
+
+  el.classList.remove('ok','wait','err');
+  el.classList.add(state||'wait');
+
+  const label=
+    id==='pCore' ? 'Core' :
+    id==='pProduct' ? 'Product' :
+    id==='pForecast' ? 'Forecast' : id;
+
+  el.innerHTML=`${label} · <b>${text||''}</b>`;
 }
 
 function pct(cur,prev){if(!prev&&!cur)return {t:'0%',c:''};if(!prev)return {t:'+100%',c:'up'};let p=(cur-prev)/prev*100;return {t:`${p>0?'+':''}${p.toFixed(1)}%`,c:p>0?'up':p<0?'down':''}}
@@ -397,15 +513,13 @@ function forecast(){
   const f=(DATA.forecast||[]).slice(0,6);
   if(!f.length)return '';
   const short=d=>d?d.slice(8,10):'-';
-  const dm=d=>d?`${d.slice(8,10)}/${d.slice(5,7)}`:'-';
-  const range=(a,b)=>`${dm(a)}–${dm(b)}`;
   return `<div class="section forecast"><div class="title" style="color:#fff;margin:0">FORECAST · WEEKLY MOMENTUM</div><div class="sub" style="color:#9fa9b3">เทียบ 2 สัปดาห์เต็มก่อนหน้า แล้วใช้ % การเติบโตคาดการณ์สัปดาห์ปัจจุบัน</div><div class="forecast-grid">${f.map(x=>{
     let mx=Math.max(1,...(x.values14||[]));
     const w1=x.week1||{units:x.previous7};
     const w2=x.week2||{units:x.current7};
     const tw=x.targetWeek||{};
     const mid=x.forecast7?.mid??0;
-    return `<div class="fc"><div class="fcstatus">${x.status}</div><div class="fcname">${x.label}</div><div class="fcg ${x.growth>=0?'up':'down'}">${x.growth>0?'+':''}${x.growth.toFixed(1)}%</div><div class="fcmeta">เทียบ ${range(w1.from,w1.to)}: ${fmt(w1.units||0)} units → ${range(w2.from,w2.to)}: ${fmt(w2.units||0)} units</div><div class="spark">${(x.values14||[]).map(v=>`<i style="height:${Math.max(4,v/mx*100)}%"></i>`).join('')}</div><div class="fcrange">Forecast ${range(tw.from,tw.to)}: <b>${fmt(mid)} units</b>${tw.daysElapsed?` · ตอนนี้ ${fmt(tw.actualUnits||0)} (${Number(tw.progressPct||0).toFixed(0)}%)`:''}</div></div>`;
+    return `<div class="fc"><div class="fcstatus">${x.status}</div><div class="fcname">${x.label}</div><div class="fcg ${x.growth>=0?'up':'down'}">${x.growth>0?'+':''}${x.growth.toFixed(1)}%</div><div class="fcmeta">สัปดาห์ก่อน ${fmt(w1.units||0)} → ล่าสุด ${fmt(w2.units||0)} units</div><div class="spark">${(x.values14||[]).map(v=>`<i style="height:${Math.max(4,v/mx*100)}%"></i>`).join('')}</div><div class="fcrange">Forecast ${short(tw.from)}–${short(tw.to)}: <b>${fmt(mid)} units</b>${tw.daysElapsed?` · ตอนนี้ ${fmt(tw.actualUnits||0)} (${Number(tw.progressPct||0).toFixed(0)}%)`:''}</div></div>`;
   }).join('')}</div></div>`;
 }
 
@@ -487,7 +601,21 @@ function render(){
 $('sync').onclick=()=>load(false);
 $('api').onclick=()=>window.open(`${API}?type=core`,'_blank');
 ['from','to','status','platform'].forEach(id=>$(id).addEventListener('change',()=>load(false)));
+
+
+
 load(true);
+
+function lockCoreReady_(){
+  const el=document.getElementById('pCore');
+  if(!el)return;
+  el.className='progress-card ok';
+  el.innerHTML='Core · <b>พร้อมทันที ✅</b>';
+}
+
+document.addEventListener('DOMContentLoaded',lockCoreReady_);
+setTimeout(lockCoreReady_,50);
+setTimeout(lockCoreReady_,500);
 </script>
 </body>
 </html>
